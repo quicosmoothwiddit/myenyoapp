@@ -18,7 +18,7 @@ For enyo, the libraries, and your code: **external assets such as images will no
 Instead, the CSS url paths are fixed up to reference the new path from the build location.
 
 ### How to compress
-
+ 
 To compress your application, you must enter the `minify` folder and run one of the scripts.
 - On Windows, just double click on `minify.bat`
 - On Mac and Linux, run `minify.sh`

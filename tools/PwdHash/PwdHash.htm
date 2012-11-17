@@ -1,0 +1,81 @@
+
+<!-- saved from url=(0049)http://crypto.stanford.edu/pwdhash/RemotePwdHash/ -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <!-- Please use https://www.pwdhash.com/ -->
+  <meta name="robots" content="noindex">
+  <!--* Remote PwdHash Form
+      * An HTML form that calls the JavaScript implementation of PwdHash
+      * Version 1.0 Copyright (C) Stanford University 2004-2005
+      * Contributors: Dan Boneh, Collin Jackson, John Mitchell, Nick Miyake, and Blake Ross
+      * Distributed under the BSD License
+      * See http://crypto.stanford.edu/PwdHash for more info.
+      *-->
+  <title>Remote PwdHash</title>
+  <script src="./md5.js" type="text/javascript"></script>
+  <script src="./pwdhash.js" type="text/javascript"></script>
+  <script src="./hashed-password.js" type="text/javascript"></script>
+  <script src="./domain-extractor.js" type="text/javascript"></script>
+  <link rel="stylesheet" type="text/css" href="./pwdhash.css">
+</head>
+<body onload="Init();">
+  <h1>Remote PwdHash 0.8</h1>
+<div class="versionlinks">Versions: <a href="http://crypto.stanford.edu/pwdhash/RemotePwdHash0.4">0.4</a> | <a href="http://crypto.stanford.edu/pwdhash/RemotePwdHash0.6/">0.6</a>
+ | <a href="http://crypto.stanford.edu/pwdhash/RemotePwdHash0.7/">0.7</a>  | 0.8
+<br>
+See also: <a href="http://alexking.org/pw">Alex King's version</a></div><br>
+  <form name="hashform" action="http://crypto.stanford.edu/pwdhash/RemotePwdHash/error.html" method="POST" onsubmit="setTimeout(&#39;GenerateToTextField()&#39;, 0); return false;">
+  <table id="theHashForm"><tbody><tr>
+    <td class="stepList">
+    <div class="step" id="theSiteDomain">
+      <h3>Site Address</h3>
+      <p><input type="text" name="domain"></p>
+    </div>
+    <div class="step" id="theSitePassword">
+      <h3>Site Password</h3>
+      <p><input type="password" name="sitePassword"></p>
+    </div>
+    </td>
+  </tr>
+  <tr>
+    <td class="stepList" colspan="2">
+      <div class="step" id="theHashedPassword">
+        <h3>Hashed Password</h3>	
+	  <span id="theGeneratePanel">
+	    <input type="text" name="hashedPassword" disabled="">
+	    <input type="submit" name"submitbutton"="" value="Generate">
+          </span>
+      <p align="center"><a id="theToggleModeLink" href="javascript:ToggleAdvancedMode()"></a></p>
+      </div>
+    </td>
+  </tr>
+  </tbody></table>
+  <div id="theexplanation">
+    <p>
+      This page will allow you to obtain the hashed password 
+      that would be generated automatically by the 
+      <a href="http://crypto.stanford.edu/PwdHash/">PwdHash</a> browser
+      extension. The process of generating the hashed password is performed 
+      locally on your machine, without sending any information to Stanford.
+    </p> 
+    <p>
+      When entering site address, you may cut and paste the full URL
+      or simply enter the site name (e.g. "www.stanford.edu") or
+      domain name ("stanford.edu"). Only the domain name is actually used.
+    </p>
+    <p>
+       If you are using the PwdHash extension right now to view this page,
+       you may experience a double hashing, resulting in an unusable password.
+       You can get around this problem by omitting the password prefix
+       (<tt>@@</tt>) part of your password, but don't get in the 
+       habit of doing this at other sites!
+    </p>
+  </div>
+  </form>
+  <div id="footer">
+    <a href="http://crypto.stanford.edu/PwdHash/">PwdHash home page</a> |
+    <a href="http://pajhome.org.uk/crypt/md5">MD5 implementation</a> |
+    <a href="./hashed-password.js">Password hashing source code</a>
+  </div>
+
+
+</body></html>
